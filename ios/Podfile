@@ -14,6 +14,8 @@ target 'BillingApp' do
     :hermes_enabled => false
   )
 
+  pod 'react-native-config', :path => '../node_modules/react-native-config'
+
   target 'BillingAppTests' do
     inherit! :complete
     # Pods for testing
@@ -23,7 +25,7 @@ target 'BillingApp' do
   #
   # Note that if you have use_frameworks! enabled, Flipper will not work and
   # you should disable the next line.
-  use_flipper!()
+#  use_flipper!()
 
   post_install do |installer|
     react_native_post_install(installer)
